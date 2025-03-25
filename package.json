@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "deploy": "npm run build && npm run export",
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "predeploy": "npm run build && npm run export",
+    "postbuild": "echo 'Build complete'",
     "start": "next start",
     "lint": "next lint"
   },
