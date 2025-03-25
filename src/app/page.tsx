@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import data from "./../../data.json";
+import data from "./data.json";
 import "./home.css"
 import { useState } from "react";
 
@@ -9,12 +9,12 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
 
-  const handleSearch = (e: any): void => {
-    setSearch(prev => e.target.value);
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>): void => {
+    setSearch(() => e.currentTarget.value);
   }
 
-  const handleDrop = (e: any): void => {
-    setRegion(prev => e.target.value);
+  const handleDrop = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    setRegion(() => e.currentTarget.value);
   }
 
   return (

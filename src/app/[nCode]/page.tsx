@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import data from "../../../data.json";
+import data from "./../data.json";
 import "./country.css"
 
 async function Country({ params }: { params: Promise<{ nCode: string }> }) {
     const code = (await params).nCode;
-    let country = data.find(d => d.numericCode === code);
+    const country = data.find(d => d.numericCode === code);
 
     // Function used to return formatted string with country's currencies or languages
     function format(array: { name: string }[] | undefined): string {
@@ -22,9 +22,9 @@ async function Country({ params }: { params: Promise<{ nCode: string }> }) {
 
     function borders(bor: string[] | undefined): { numericCode: string, name: string }[] {
         if (bor === undefined) return [];
-        let countries: { numericCode: string, name: string }[] = [];
+        const countries: { numericCode: string, name: string }[] = [];
         bor.forEach(c => {
-            let coun: { numericCode: string, name: string } | undefined = data.find(d => d.alpha3Code === c);
+            const coun: { numericCode: string, name: string } | undefined = data.find(d => d.alpha3Code === c);
             if (coun) {
                 countries.push(coun);
             }
@@ -32,7 +32,7 @@ async function Country({ params }: { params: Promise<{ nCode: string }> }) {
         return countries;
     }
 
-    let bor: { numericCode: string, name: string }[] = borders(country?.borders);
+    const bor: { numericCode: string, name: string }[] = borders(country?.borders);
 
     return (
         <main className="c-main">
