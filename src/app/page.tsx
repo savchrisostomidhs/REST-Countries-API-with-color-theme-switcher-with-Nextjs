@@ -9,10 +9,6 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
 
-  const handleDrop = (e: React.ChangeEvent<HTMLSelectElement>): void => {
-    setRegion(e.currentTarget.value);
-  }
-
   return (
     <main className="h-main">
       <div className="filter">
@@ -23,7 +19,7 @@ export default function Home() {
           <input value={search} onChange={e => setSearch(e.target.value)} id="search" type="text" placeholder="Search for a country..." />
         </div>
 
-        <select onChange={handleDrop} name="region" id="region">
+        <select value={region} onChange={e => setRegion(e.target.value)} name="region" id="region">
           <option hidden defaultValue={"None"} value="None">Filter by region</option>
           <option value="All">All</option>
           <option value="Africa">Africa</option>
