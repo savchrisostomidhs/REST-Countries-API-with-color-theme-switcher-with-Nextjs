@@ -10,11 +10,15 @@ export default function Home() {
   const [region, setRegion] = useState("");
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>): void => {
-    setSearch(() => e.currentTarget.value);
+    if (e.currentTarget) {
+      setSearch(() => e.currentTarget.value);
+    }
   }
 
   const handleDrop = (e: React.ChangeEvent<HTMLSelectElement>): void => {
-    setRegion(() => e.currentTarget.value);
+    if (e.currentTarget) {
+      setRegion(() => e.currentTarget.value);
+    }
   }
 
   return (
@@ -52,7 +56,7 @@ export default function Home() {
                 <p><strong>Region:</strong> {country.region}</p>
                 <p><strong>Capital:</strong> {country.capital}</p>
               </div>
-            </Link> : ""
+            </Link> : null
         )}
       </div>
     </main>
