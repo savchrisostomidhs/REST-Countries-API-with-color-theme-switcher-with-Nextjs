@@ -9,7 +9,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
 
-  const handleSearch = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+  const handleSearch = (e: ChangeEventHandler<HTMLInputElement>): void => {
     if (e.currentTarget) {
       setSearch(() => e.currentTarget.value);
     }
