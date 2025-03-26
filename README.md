@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](https://rest-countries-api-with-color-theme-switcher-with-nextjs.vercel.app/)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-with-nextjs-E_QjZuBUMJ)
+- Live Site URL: [here](https://rest-countries-api-with-color-theme-switcher-with-nextjs.vercel.app/)
 
 ## My process
 
