@@ -55,12 +55,12 @@ async function Country({ params }: { params: Promise<{ nCode: string }> }) {
                             <li><p><strong>Native Name:</strong> {country?.nativeName}</p></li>
                             <li><p><strong>Population:</strong> {country?.population.toLocaleString()}</p></li>
                             <li><p><strong>Region:</strong> {country?.region}</p></li>
-                            <li><p><strong>Sub Region</strong> {country?.subregion}</p></li>
+                            <li><p><strong>Sub Region:</strong> {country?.subregion}</p></li>
                             <li><p><strong>Capital:</strong> {country?.capital}</p></li>
                         </ul>
                         <ul>
-                            <li><p><strong>Top Level Domain</strong> {country?.topLevelDomain}</p></li>
-                            <li><p><strong>Currencies</strong> {format(country?.currencies)}</p></li>
+                            <li><p><strong>Top Level Domain:</strong> {country?.topLevelDomain}</p></li>
+                            <li><p><strong>Currencies:</strong> {format(country?.currencies)}</p></li>
                             <li><p><strong>Languages:</strong> {format(country?.languages)}</p></li>
                         </ul>
                     </div>
