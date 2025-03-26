@@ -10,15 +10,11 @@ export default function Home() {
   const [region, setRegion] = useState("");
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>): void => {
-    if (e.currentTarget) {
-      setSearch(() => e.currentTarget.value);
-    }
+    setSearch(e.currentTarget.value);
   }
 
   const handleDrop = (e: React.ChangeEvent<HTMLSelectElement>): void => {
-    if (e.currentTarget) {
-      setRegion(() => e.currentTarget.value);
-    }
+    setRegion(e.currentTarget.value);
   }
 
   return (
